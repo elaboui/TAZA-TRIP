@@ -1,0 +1,24 @@
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-input type="text" placeholder="Chercher une place" [(ngModel)] = "searchTerm"></ion-input>
+    <ion-buttons slot="end" (click)="getImagesDatabase()"><ion-icon name="search" slot="end"></ion-icon></ion-buttons>
+  </ion-toolbar>
+
+<ion-content [fullscreen]="true">
+  <br>
+<ion-card *ngFor="let image of images">
+ <div>
+  <img src="{{image.url}}" alt="{{image.name}}" style="width:100%;height: 85%; display: block;">
+  <strong  class="top-left">{{image.name}}</strong>
+  <button  class="bottom-left" [routerLink]=  "['/place-detaille',image.name]"><strong>Voir plus</strong></button>
+</div> 
+</ion-card>
+
+    <ion-fab [routerLink]= "['/add-page-local']" vertical="bottom" horizontal="end" edge="false" slot="fixed">
+      <ion-fab-button translucent="true" color="primary">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+</ion-content>

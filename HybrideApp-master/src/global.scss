@@ -1,0 +1,113 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+ion-icon{
+  font-size:24px;
+  padding:10px;
+  filter: drop-shadow(0 0 0.5px #000);
+}
+
+
+
+ion-toolbar{
+  border: none;
+  border-radius: 10px;
+  width:90%;
+  left:5%;
+  right:5%;
+  top:1.5%;
+  box-shadow: 0 0 2px #000;
+}
+
+.map-toolbar{
+  border: none;
+  border-radius: 0px;
+  width:100%;
+  left:0%;
+  right:0%;
+  top:0%;
+  box-shadow: 0 0 2px #000;
+}
+
+ion-button{
+	filter: drop-shadow(0 0 1.5px #000);
+}
+
+button{
+	filter: drop-shadow(0 0 1.5px #000);
+}
+
+/* Top left text */
+.top-left { 
+  color: white;
+  border:2%;
+  text-shadow: 0 0 4px #000;
+  font-size: 200%;
+  line-height: 40px;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  right: 10%;
+}
+
+button.bottom-left { 
+  width: 25%;
+  height: 15%;
+  text-align: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 110%;
+  color: white;
+  background-color: #167016;
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  border: 2px solid none;
+  border-radius: 10px;
+}
+
+
+ion-text {
+  padding: 10px;
+  font-size: 130%;
+  font-style: bold;
+  text-shadow: 0 0 0.5px #000;
+}
+
+.image-card{
+	height: 30%;
+	background-color: lightgray;
+}
+
+
+/* la taille de notre map*/
+#map{
+	height: 80%;
+	background-color: lightgray;
+}
+

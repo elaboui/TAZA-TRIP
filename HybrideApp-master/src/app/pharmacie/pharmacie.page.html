@@ -1,0 +1,33 @@
+<ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-input type="text" placeholder="Chercher une Pharmacie" [(ngModel)] = "searchTerm"></ion-input>
+    <ion-buttons slot="end" (click)="getImagesDatabase()"><ion-icon name="search" slot="end"></ion-icon></ion-buttons>
+  </ion-toolbar>
+
+
+
+<ion-content>
+  <br>
+  
+<div *ngFor="let image of images">
+  <ion-list>
+
+  <ion-item>
+    <ion-avatar slot="start">
+      <ion-img src="{{image.url}}"></ion-img>
+    </ion-avatar>
+    <ion-label>
+      <h2>{{image.name}}</h2>
+      <p>{{image.adresse}}</p>
+    </ion-label>
+    <ion-icon [routerLink] = "['/localisation',image.lat,image.long]" name="location" slot="end"></ion-icon>
+  </ion-item>
+
+
+</ion-list>
+</div>
+</ion-content>
+
+
